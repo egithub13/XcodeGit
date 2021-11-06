@@ -15,5 +15,6 @@ struct ModalView: View {
       Text("This is the Modal View")
       Text("In a separate file")
     }
+    .navigationBarTitle("Second View", displayMode: .inline)
   }
 }

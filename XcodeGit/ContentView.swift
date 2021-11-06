@@ -8,17 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
-  @State private var isPresented = false
+  
     var body: some View {
       NavigationView {
-        Button("Show Modal") {
-          self.isPresented = true
-        }
-        .foregroundColor(.red)
-        .sheet(isPresented: $isPresented, content: {
-          //Text("This is the modal screen")
-          ModalView()
-        })
+        NavigationLink(
+          destination: ModalView()) {
+            Text("Next")
+          }
         .navigationTitle("Git and Xcode")
       }
     }
